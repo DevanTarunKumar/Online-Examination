@@ -25,7 +25,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
         <form action="login.php?q=index.php" method="POST">
 
  <font size="5" color="maroon" face="Comic Sans MS"> User Type:
-<select style="font-size:12pt;
+<select id="select" name="select" style="font-size:12pt;
 margin: 8px 0;
 border-radius: 4px;
 box-sizing: border-box;

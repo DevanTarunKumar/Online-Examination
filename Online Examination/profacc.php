@@ -1,9 +1,15 @@
 
 <html>
 <head>
+  <?php echo file_get_contents('acc.css'); ?>
 
 </head>
-<body>
+<body background="faculty.jpeg">
+
+
+ 
+
+
  <?php
  include_once 'databaseconnect.php';
 session_start();
@@ -16,6 +22,26 @@ else
 $name = $_SESSION['name'];
 $email=$_SESSION['email'];
 
+echo ' <div class="nav_bar_1">
+    <a  class="active" style="font-size: 30px;" href="#home">Test your skill</a>
+    <a class="active"href="#" style="float:right;"> Welcome '.$name.'</a>
+     <a class="active"href="logout.php">Logout</a>
+     </div>
+
+     <div class="nav_bar_2">
+    <a href="profacc.php?q=1">home</a>
+    <a href="profacc.php?q=3">history</a>
+    <a href="">ranking</a>
+</div>
+
+</div>
+<div class="nav_bar_bot">
+    <span class="active">
+    <a href="#home">About us</a>
+    <a href="#contact">Contact Us</a>
+    <a href="#about">feedback</a>
+</div>
+';
 
 include_once 'databaseconnect.php';
 //echo '<span class="pull-right top title1" ><span class="log1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;&nbsp;Hello,</span> <a href="account.php?q=1" class="log log1">'.$name.'</a>&nbsp;|&nbsp;<a href="logout.php?q=account.php" class="log"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;Signout</button></a></span>';
